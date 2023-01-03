@@ -1,19 +1,25 @@
+@import '~@fortawesome/fontawesome-free/css/brands';
+
+:root {
+  --background-dark: rgba(0, 0, 0, 0.8);
+}
+
 body {
   margin: 0;
+  color: white;
   font-family: sans-serif;
 }
 
 h1 {
   text-align: center;
-  margin-top: 0;
+  margin: 0;
   color: #ed1c24;
   text-transform: uppercase;
-  font-size: 40px;
+  font-size: 50px;
   font-weight: 800;
 }
 
 ul {
-  color: white;
   list-style-type: none;
   font-size: 22px;
   display: flex;
@@ -29,9 +35,57 @@ ul {
   background: url(./images/hand-restaurant-meal-food-cooking-culinary-633103-pxhere.com.jpg);
   background-size: cover;
   background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 header {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: var(--background-dark);
   padding: 20px 0;
+}
+
+main {
+  max-width: 960px;
+  margin: auto;
+  margin-top: 50px;
+  border: 2px var(--background-dark) solid;
+}
+
+.main-content {
+  background-color: var(--background-dark);
+  padding: 30px 40px;
+  text-align: center;
+  margin: 10px;
+  font-size: 18px;
+}
+
+.main-content p {
+  margin: 0;
+}
+
+.promo {
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+footer {
+  display: flex;
+  background-color: var(--background-dark);
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer a {
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+}
+
+footer i {
+  font-family: 'Font Awesome 6 Brands';
+  font-style: normal;
+  padding-left: 10px;
 }
