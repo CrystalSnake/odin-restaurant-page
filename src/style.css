@@ -1,3 +1,37 @@
 body {
-  background-color: aliceblue;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 0;
+  color: #ed1c24;
+  text-transform: uppercase;
+  font-size: 40px;
+  font-weight: 800;
+}
+
+ul {
+  color: white;
+  list-style-type: none;
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+#content {
+  width: 100vw;
+  height: 100vh;
+  background: url(./images/hand-restaurant-meal-food-cooking-culinary-633103-pxhere.com.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px 0;
 }
