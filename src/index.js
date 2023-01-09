@@ -1,4 +1,5 @@
 import homeContent from './home';
+import menuContent from './menu';
 import './style.css';
 
 import '@fortawesome/fontawesome-free/js/brands';
@@ -23,7 +24,7 @@ home.addEventListener('click', (e) => {
 const menu = document.createElement('li');
 menu.textContent = 'Menu';
 menu.addEventListener('click', (e) => {
-  loadMain();
+  loadMain(menuContent());
 });
 const contacts = document.createElement('li');
 contacts.textContent = 'Contacts';
