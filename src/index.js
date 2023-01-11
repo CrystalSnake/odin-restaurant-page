@@ -5,8 +5,6 @@ import './style.css';
 
 import '@fortawesome/fontawesome-free/js/brands';
 
-console.log('Hello world!');
-
 const container = document.createElement('div');
 container.setAttribute('id', 'content');
 
