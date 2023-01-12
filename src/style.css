@@ -89,3 +89,7 @@ footer i {
   font-style: normal;
   padding-left: 10px;
 }
+
+.dish-card {
+  margin: 40px 0;
+}
