@@ -2,6 +2,7 @@
 
 :root {
   --background-dark: rgba(0, 0, 0, 0.8);
+  --accent-red: #ed1c24;
 }
 
 body {
@@ -13,7 +14,7 @@ body {
 h1 {
   text-align: center;
   margin: 0;
-  color: #ed1c24;
+  color: var(--accent-red);
   text-transform: uppercase;
   font-size: 50px;
   font-weight: 800;
@@ -90,6 +91,56 @@ footer i {
   padding-left: 10px;
 }
 
+/* Menu */
+.main-content.menu-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .dish-card {
-  margin: 40px 0;
+  width: 400px;
+  height: 300px;
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.dish-card h2 {
+  color: var(--accent-red);
+  margin-bottom: 10px;
+  margin-top: 0;
+  font-size: 20px;
+}
+
+.dish-overlay {
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.9);
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+}
+
+.dish-overlay:hover {
+  opacity: 100;
+  transition: ease 1s;
+}
+
+#yakisoba {
+  background-image: url(./images/asian-dish-meal-food-meat-cuisine-774746-pxhere.com.jpg);
+}
+
+#rolls {
+  background-image: url(./images/bowl-dish-food-green-produce-vegetable-1331506-pxhere.com.jpg);
+}
+
+#ramen {
+  background-image: url(./images/dish-meal-food-breakfast-cuisine-soup-729807-pxhere.com.jpg);
+}
+
+#shrimp-fried-rice {
+  background-image: url(./images/sea-white-restaurant-isolated-asian-dish-819397-pxhere.com.jpg);
 }

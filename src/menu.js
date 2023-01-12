@@ -28,28 +28,28 @@ const dishes = [
   },
 ];
 
-function getDishCard(name, content, image) {
+function getDishCard(name, content) {
   const dishCard = document.createElement('div');
   dishCard.classList.add('dish-card');
+  dishCard.id = `${name.replaceAll(' ', '-').toLowerCase()}`;
+  const overlay = document.createElement('div');
+  overlay.classList.add('dish-overlay');
   const dishName = document.createElement('h2');
   dishName.classList.add('dish-name');
   dishName.textContent = name;
-  const dishImage = document.createElement('img');
-  dishImage.classList.add('dish-image');
-  dishImage.src = image;
   const dishContent = document.createElement('p');
   dishContent.classList.add('dish-content');
   dishContent.textContent = content;
-  dishCard.appendChild(dishName);
-  dishCard.appendChild(dishImage);
-  dishCard.appendChild(dishContent);
+  overlay.appendChild(dishName);
+  overlay.appendChild(dishContent);
+  dishCard.appendChild(overlay);
 
   return dishCard;
 }
 
 function getMenu() {
   const menuContent = document.createElement('div');
-  menuContent.classList.add('main-content');
+  menuContent.classList.add('main-content', 'menu-content');
   for (let dishItem of dishes) {
     const dish = getDishCard(dishItem.name, dishItem.content, dishItem.image);
     menuContent.appendChild(dish);
