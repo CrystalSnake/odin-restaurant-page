@@ -117,7 +117,7 @@ footer i {
 .dish-overlay {
   opacity: 0;
   background: rgba(0, 0, 0, 0.9);
-  height: 80px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -125,7 +125,7 @@ footer i {
 }
 
 .dish-overlay:hover {
-  opacity: 100;
+  opacity: 1;
   transition: ease 1s;
 }
 
