@@ -1,3 +1,5 @@
+import week from './hours.json';
+
 function getContacts() {
   const contactsContent = document.createElement('div');
   contactsContent.classList.add('main-content', 'contacts-content');
@@ -8,38 +10,13 @@ function getContacts() {
   const hoursHeader = document.createElement('h2');
   hoursHeader.textContent = 'Hours:';
   const hoursContent = document.createElement('ul');
-  const week = [
-    'Monday',
-    'Tuesday',
-    'Wednesday',
-    'Thursday',
-    'Friday',
-    'Saturday',
-    'Sunday',
-  ];
+
   for (let day of week) {
     const dayOfWeek = document.createElement('li');
-    switch (day) {
-      case 'Monday':
-      case 'Tuesday':
-      case 'Wednesday':
-      case 'Thursday':
-      case 'Friday':
-        dayOfWeek.textContent = `${day}: 10:00 - 22:00`;
-        hoursContent.appendChild(dayOfWeek);
-        break;
-      case 'Saturday':
-        dayOfWeek.textContent = `${day}: 9:00 - 23:00`;
-        hoursContent.appendChild(dayOfWeek);
-        break;
-      case 'Sunday':
-        dayOfWeek.textContent = `${day}: 9:00 - 23:00`;
-        hoursContent.appendChild(dayOfWeek);
-        break;
-      default:
-        break;
-    }
+    dayOfWeek.textContent = `${day.day}: ${day.hours}`;
+    hoursContent.appendChild(dayOfWeek);
   }
+
   contactsContent.appendChild(locationHeader);
   contactsContent.appendChild(locationContent);
   contactsContent.appendChild(hoursHeader);
