@@ -25,6 +25,10 @@ ul {
   padding: 0;
 }
 
+a {
+  color: var(--accent-red);
+}
+
 header ul {
   font-size: 22px;
   display: flex;
