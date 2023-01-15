@@ -14,26 +14,24 @@ const logo = document.createElement('h1');
 logo.textContent = 'Hikari';
 
 const tabMenu = document.createElement('div');
-const ul = document.createElement('ul');
-const home = document.createElement('li');
+const home = document.createElement('button');
 home.textContent = 'Home';
 home.addEventListener('click', (e) => {
   loadMain(homeContent());
 });
-const menu = document.createElement('li');
+const menu = document.createElement('button');
 menu.textContent = 'Menu';
 menu.addEventListener('click', (e) => {
   loadMain(menuContent());
 });
-const contacts = document.createElement('li');
+const contacts = document.createElement('button');
 contacts.textContent = 'Contacts';
 contacts.addEventListener('click', (e) => {
   loadMain(contactsContent());
 });
-ul.appendChild(home);
-ul.appendChild(menu);
-ul.appendChild(contacts);
-tabMenu.appendChild(ul);
+tabMenu.appendChild(home);
+tabMenu.appendChild(menu);
+tabMenu.appendChild(contacts);
 header.appendChild(logo);
 header.appendChild(tabMenu);
 

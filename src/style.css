@@ -29,13 +29,35 @@ a {
   color: var(--accent-red);
 }
 
-header ul {
-  font-size: 22px;
+/* Header */
+
+header {
+  background-color: var(--background-dark);
+  padding: 20px 0;
+}
+
+header div {
   display: flex;
   justify-content: center;
   gap: 50px;
-  margin-bottom: 0;
 }
+
+header button {
+  font-size: 22px;
+  width: 120px;
+  height: 50px;
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  color: white;
+}
+
+header button:hover {
+  font-size: 24px;
+  color: var(--accent-red);
+  cursor: pointer;
+}
+
+/* Main */
 
 #content {
   width: 100vw;
@@ -46,11 +68,6 @@ header ul {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-
-header {
-  background-color: var(--background-dark);
-  padding: 20px 0;
 }
 
 main {
@@ -77,6 +94,8 @@ main {
   margin: 20px auto;
 }
 
+/* Footer */
+
 footer {
   display: flex;
   background-color: var(--background-dark);
@@ -99,6 +118,7 @@ footer i {
 }
 
 /* Menu */
+
 .main-content.menu-content {
   display: flex;
   flex-wrap: wrap;
@@ -135,6 +155,8 @@ footer i {
   opacity: 1;
   transition: ease 1s;
 }
+
+/* Menu images */
 
 #yakisoba {
   background-image: url(./images/asian-dish-meal-food-meat-cuisine-774746-pxhere.com.jpg);
