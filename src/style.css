@@ -42,7 +42,7 @@ header div {
   gap: 50px;
 }
 
-header button {
+.menu-button {
   font-size: 22px;
   width: 120px;
   height: 50px;
@@ -51,10 +51,14 @@ header button {
   color: white;
 }
 
-header button:hover {
+.menu-button:hover {
   font-size: 24px;
   color: var(--accent-red);
   cursor: pointer;
+}
+
+.menu-button.active {
+  color: var(--accent-red);
 }
 
 /* Main */

@@ -15,19 +15,31 @@ logo.textContent = 'Hikari';
 
 const tabMenu = document.createElement('div');
 const home = document.createElement('button');
+home.classList.add('menu-button', 'active');
 home.textContent = 'Home';
 home.addEventListener('click', (e) => {
   loadMain(homeContent());
+  const act = document.querySelector('.active');
+  act.classList.remove('active');
+  home.classList.add('active');
 });
 const menu = document.createElement('button');
+menu.classList.add('menu-button');
 menu.textContent = 'Menu';
 menu.addEventListener('click', (e) => {
   loadMain(menuContent());
+  const act = document.querySelector('.active');
+  act.classList.remove('active');
+  menu.classList.add('active');
 });
 const contacts = document.createElement('button');
+contacts.classList.add('menu-button');
 contacts.textContent = 'Contacts';
 contacts.addEventListener('click', (e) => {
   loadMain(contactsContent());
+  const act = document.querySelector('.active');
+  act.classList.remove('active');
+  contacts.classList.add('active');
 });
 tabMenu.appendChild(home);
 tabMenu.appendChild(menu);
