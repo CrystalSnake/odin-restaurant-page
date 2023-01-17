@@ -13,33 +13,33 @@ const header = document.createElement('header');
 const logo = document.createElement('h1');
 logo.textContent = 'Hikari';
 
+function menuActiveChange(button) {
+  const act = document.querySelector('.active');
+  act.classList.remove('active');
+  button.classList.add('active');
+}
+
 const tabMenu = document.createElement('div');
 const home = document.createElement('button');
 home.classList.add('menu-button', 'active');
 home.textContent = 'Home';
 home.addEventListener('click', (e) => {
   loadMain(homeContent());
-  const act = document.querySelector('.active');
-  act.classList.remove('active');
-  home.classList.add('active');
+  menuActiveChange(home);
 });
 const menu = document.createElement('button');
 menu.classList.add('menu-button');
 menu.textContent = 'Menu';
 menu.addEventListener('click', (e) => {
   loadMain(menuContent());
-  const act = document.querySelector('.active');
-  act.classList.remove('active');
-  menu.classList.add('active');
+  menuActiveChange(menu);
 });
 const contacts = document.createElement('button');
 contacts.classList.add('menu-button');
 contacts.textContent = 'Contacts';
 contacts.addEventListener('click', (e) => {
   loadMain(contactsContent());
-  const act = document.querySelector('.active');
-  act.classList.remove('active');
-  contacts.classList.add('active');
+  menuActiveChange(contacts);
 });
 tabMenu.appendChild(home);
 tabMenu.appendChild(menu);
