@@ -53,9 +53,11 @@ container.appendChild(header);
 const main = document.createElement('main');
 
 function loadMain(content) {
-  const main = document.querySelector('main');
   main.textContent = '';
-  main.appendChild(content);
+  const mainContainer = document.createElement('div');
+  mainContainer.classList.add('main-container');
+  mainContainer.appendChild(content);
+  main.appendChild(mainContainer);
 }
 
 container.appendChild(main);
