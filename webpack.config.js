@@ -14,22 +14,15 @@ module.exports = {
     }),
   ],
   output: {
-    filename: '[name].bundle.js',
+    filename: '[name].js',
     path: path.resolve(__dirname, 'dist'),
-    // clean: true,
+    clean: true,
   },
   module: {
     rules: [
       {
         test: /\.css$/i,
         use: ['style-loader', 'css-loader'],
-      },
-      {
-        test: /\.(woff|woff2|eot|ttf|otf)$/,
-        loader: 'file-loader',
-        options: {
-          outputPath: '../fonts',
-        },
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,

@@ -2,8 +2,7 @@ import homeContent from './home';
 import menuContent from './menu';
 import contactsContent from './contacts';
 import './style.css';
-
-import '@fortawesome/fontawesome-free/js/brands';
+import github from './images/github.svg';
 
 const container = document.createElement('div');
 container.setAttribute('id', 'content');
@@ -69,7 +68,9 @@ function getFooter() {
   copy.textContent = 'Copyright © 2023 CrystalSnake';
   const githubLink = document.createElement('a');
   githubLink.href = 'https://github.com/CrystalSnake';
-  githubLink.innerHTML = '<i class="fa-brands fa-github"></i>';
+  const githubIcon = document.createElement('img');
+  githubIcon.src = github;
+  githubLink.appendChild(githubIcon);
   footer.appendChild(copy);
   footer.appendChild(githubLink);
   container.appendChild(footer);
